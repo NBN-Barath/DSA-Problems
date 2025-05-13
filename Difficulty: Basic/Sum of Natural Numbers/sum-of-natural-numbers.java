@@ -28,11 +28,14 @@ class GFG {
 
 class Solution {
     public static int seriesSum(int n) {
-        // code here
-        int sum = 0;
-        for(int i = 1; i <= n; i++){
-            sum += i; 
-        }
+        int sum = sums(n);
         return sum;
+    }
+    
+    public static int sums(int n){
+        if (n == 0) {
+            return 0;
+        }
+        return n + sums(n - 1);
     }
 }
