@@ -3,18 +3,9 @@ class Solution {
     if(n == 1){
             return true;
         }
-        if(n % 3 != 0){
+        if(n <= 0){
             return false;
         }
-        return powerOfThree(n,1);
-    }
-    public boolean powerOfThree(int n, int pow){
-        if(Math.pow(3 , pow) == n){
-            return true;
-        }
-        if(Math.pow(3 , pow) > n){
-            return false;
-        }
-        return powerOfThree(n,pow + 1);
+        return (n % 3 == 0) && isPowerOfThree(n / 3);
     }
 }
