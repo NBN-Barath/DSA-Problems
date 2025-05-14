@@ -3,10 +3,10 @@ class Solution {
     if(n == 1){
             return true;
         }
-        if(n % 4 != 0){
+        if(n <=0){
             return false;
         }
-        return powerOfFour(n,1);
+        return (n % 4 == 0) && isPowerOfFour(n / 4);
     }
     public boolean powerOfFour(int n, int pow){
         if(Math.pow(4 , pow) == n){
