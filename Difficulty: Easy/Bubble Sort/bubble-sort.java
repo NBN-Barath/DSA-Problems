@@ -10,7 +10,7 @@ import java.util.*;
 // User function Template for Java
 
 class Solution {
-    // Function to sort the array using bubble sort algorithm.
+    // Function to sort the array using bubble sort algorithm with out Recursion.
     public static void bubbleSort(int arr[]) {
         // code here
         for(int i = arr.length - 1; i >= 0; i--){
@@ -20,11 +20,31 @@ class Solution {
                     arr[j + 1] = arr[j];
                     arr[j] = temp;
             }
-            
         }
     }
 }
 }
+
+    // Function to sort the array using bubble sort algorithm with Recursion.
+    // Worst Time complexity
+//     public static void bubbleSort(int arr[]){
+//         int n = 0;
+//         sort(arr,n);
+//     }
+//              public static void sort(int[] arr, int n) {
+//         if (n == 1) {
+//             return;
+//         }
+//         for (int i = 0; i < n - 1; i++) {
+//             if (arr[i] > arr[i + 1]) {
+//                 int temp = arr[i];
+//                 arr[i] = arr[i + 1];
+//                 arr[i + 1] = temp;
+//             }
+//         }
+//         sort(arr, n - 1);
+//     }
+// }
 
 
 //{ Driver Code Starts.
