@@ -51,19 +51,27 @@ class GFG {
 
 
 class Solution {
+    // public static int largest(int[] arr) {
+    //     // code here
+    //     int max = arr[0];
+    //     int index = 0;
+    //     return largest(arr,max,index);
+    // }
+    // public static int largest(int[] arr, int max ,int index)
+    // {
+    //     if(index < arr.length){
+    //         if(max < arr[index]){
+    //             max = arr[index];
+    //         }
+    //         return largest(arr,max,index+1);
+    //     }
+    //     return max;
+    // }
+    
     public static int largest(int[] arr) {
-        // code here
         int max = arr[0];
-        int index = 0;
-        return largest(arr,max,index);
-    }
-    public static int largest(int[] arr, int max ,int index)
-    {
-        if(index < arr.length){
-            if(max < arr[index]){
-                max = arr[index];
-            }
-            return largest(arr,max,index+1);
+        for(int i = 1; i < arr.length; i++){
+            max = Math.max(arr[i],max);
         }
         return max;
     }
