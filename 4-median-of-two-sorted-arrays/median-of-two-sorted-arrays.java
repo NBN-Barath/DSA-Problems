@@ -23,7 +23,7 @@ class Solution {
             }
             if(l1 > r2){
                 high = mid1 - 1;
-            } else if(l2 > r1){
+            } else {
                 low = mid1 + 1;
             }
             
